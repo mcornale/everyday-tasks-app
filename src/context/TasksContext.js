@@ -10,13 +10,13 @@ const DUMMY_CATEGORIES = [
       return COLORS_HEX[this.id - 1];
     },
   },
-  {
-    id: 2,
-    name: 'Work',
-    get color() {
-      return COLORS_HEX[this.id - 1];
-    },
-  },
+  // {
+  //   id: 2,
+  //   name: 'Work',
+  //   get color() {
+  //     return COLORS_HEX[this.id - 1];
+  //   },
+  // },
 ];
 
 const DUMMY_TASKS = [
@@ -26,36 +26,36 @@ const DUMMY_TASKS = [
     completed: false,
     category: DUMMY_CATEGORIES[0].name,
   },
-  {
-    id: 2,
-    name: 'Doing workout after work',
-    completed: true,
-    category: DUMMY_CATEGORIES[0].name,
-  },
-  {
-    id: 3,
-    name: 'Read 10 pages of a book',
-    completed: false,
-    category: DUMMY_CATEGORIES[0].name,
-  },
-  {
-    id: 4,
-    name: 'Check email at 10:00AM',
-    completed: false,
-    category: DUMMY_CATEGORIES[1].name,
-  },
-  {
-    id: 5,
-    name: 'Drink coffee during the break',
-    completed: true,
-    category: DUMMY_CATEGORIES[1].name,
-  },
-  {
-    id: 6,
-    name: 'Make an appointment with the boss',
-    completed: true,
-    category: DUMMY_CATEGORIES[1].name,
-  },
+  // {
+  //   id: 2,
+  //   name: 'Doing workout after work',
+  //   completed: true,
+  //   category: DUMMY_CATEGORIES[0].name,
+  // },
+  // {
+  //   id: 3,
+  //   name: 'Read 10 pages of a book',
+  //   completed: false,
+  //   category: DUMMY_CATEGORIES[0].name,
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Check email at 10:00AM',
+  //   completed: false,
+  //   category: DUMMY_CATEGORIES[1].name,
+  // },
+  // {
+  //   id: 5,
+  //   name: 'Drink coffee during the break',
+  //   completed: true,
+  //   category: DUMMY_CATEGORIES[1].name,
+  // },
+  // {
+  //   id: 6,
+  //   name: 'Make an appointment with the boss',
+  //   completed: true,
+  //   category: DUMMY_CATEGORIES[1].name,
+  // },
 ];
 
 const TasksContext = createContext();
