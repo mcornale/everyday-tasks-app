@@ -6,7 +6,7 @@ const Logo = () => {
     <header className={styles['header']}>
       <img src={logoSrc} alt='todoLogo' />
       <h1 className={styles['header__title']}>
-        <span>ToDo</span> App
+        <span>ED</span>Tasks
       </h1>
     </header>
   );
