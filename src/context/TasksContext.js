@@ -1,43 +1,85 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 
 const colorsHex = ['#7a97ff', '#9bd4b9'];
 
-const DUMMY_TASKS = [
+const DUMMY_CATEGORIES = [
   {
     id: 1,
-    category: 'Routine',
-    tasks: [
-      { name: 'Drink water after waking up', completed: false },
-      { name: 'Doing workout after work', completed: true },
-      { name: 'Read 10 pages of a book', completed: false },
-    ],
+    name: 'Routine',
     get color() {
       return colorsHex[this.id - 1];
     },
   },
   {
     id: 2,
-    category: 'Work',
-    tasks: [
-      { name: 'Drink water after waking up', completed: true },
-      { name: 'Doing workout after work', completed: true },
-      { name: 'Read 10 pages of a book', completed: false },
-    ],
+    name: 'Work',
     get color() {
       return colorsHex[this.id - 1];
     },
   },
 ];
 
+const DUMMY_TASKS = [
+  {
+    id: 1,
+    name: 'Drink water after waking up',
+    completed: false,
+    category: DUMMY_CATEGORIES[0].name,
+  },
+  {
+    id: 2,
+    name: 'Doing workout after work',
+    completed: true,
+    category: DUMMY_CATEGORIES[0].name,
+  },
+  {
+    id: 3,
+    name: 'Read 10 pages of a book',
+    completed: false,
+    category: DUMMY_CATEGORIES[0].name,
+  },
+  {
+    id: 4,
+    name: 'Check email at 10:00AM',
+    completed: false,
+    category: DUMMY_CATEGORIES[1].name,
+  },
+  {
+    id: 5,
+    name: 'Drink coffee during the break',
+    completed: true,
+    category: DUMMY_CATEGORIES[1].name,
+  },
+  {
+    id: 6,
+    name: 'Make an appointment with the boss',
+    completed: true,
+    category: DUMMY_CATEGORIES[1].name,
+  },
+];
+
 const TasksContext = createContext();
 
 const TasksContextProvider = (props) => {
-  const initialContext = {
-    tasksInfo: DUMMY_TASKS,
+  const [tasks, setTasks] = useState(DUMMY_TASKS);
+  const [categories, setCategories] = useState(DUMMY_CATEGORIES);
+
+  const updateTaskCompletion = (taskId) => {
+    const updatedTasks = [...tasks];
+    updatedTasks.forEach((task) => {
+      if (task.id === taskId) task.completed = !task.completed;
+    });
+    setTasks(updatedTasks);
+  };
+
+  const context = {
+    tasks,
+    categories,
+    updateTaskCompletion,
   };
 
   return (
-    <TasksContext.Provider value={initialContext}>
+    <TasksContext.Provider value={context}>
       {props.children}
     </TasksContext.Provider>
   );

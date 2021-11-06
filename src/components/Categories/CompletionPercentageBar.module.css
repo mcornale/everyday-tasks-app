@@ -9,4 +9,5 @@
 .bar__value {
   height: 100%;
   border-radius: 1rem;
+  transition: all 0.3s;
 }

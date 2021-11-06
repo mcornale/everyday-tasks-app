@@ -3,14 +3,14 @@ import Card from '../UI/Card';
 
 const CategoryItem = (props) => {
   const completedPercentage = Math.round(
-    (props.completedTasks / props.totalTasks) * 100
+    (props.numCompletedTasks / props.numTotalTasks) * 100
   );
 
   return (
     <Card>
       <h5
         style={{ color: props.color }}
-      >{`${props.completedTasks}/${props.totalTasks} tasks`}</h5>
+      >{`${props.numCompletedTasks}/${props.numTotalTasks} tasks`}</h5>
       <h3>{props.name}</h3>
       <CompletionPercentageBar
         color={props.color}

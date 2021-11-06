@@ -1,12 +1,15 @@
 import Card from '../UI/Card';
 import Checkbox from '../UI/Checkbox';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import TasksContext from '../../context/TasksContext';
 
 const TaskItem = (props) => {
+  const tasksContext = useContext(TasksContext);
   const [isChecked, setIsChecked] = useState(props.completed);
 
   const onChangeHandler = () => {
     setIsChecked((prevState) => !prevState);
+    tasksContext.updateTaskCompletion(props.id);
   };
 
   return (

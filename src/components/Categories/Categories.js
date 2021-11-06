@@ -7,12 +7,22 @@ import CategoryItem from './CategoryItem';
 const Categories = () => {
   const tasksContext = useContext(TasksContext);
 
-  const categoryItems = tasksContext.tasksInfo.map((tasksItem) => ({
-    name: tasksItem.category,
-    totalTasks: tasksItem.tasks.length,
-    completedTasks: tasksItem.tasks.filter((task) => task.completed).length,
-    color: tasksItem.color,
-  }));
+  const categoryItems = tasksContext.categories.map((categoryObj) => {
+    const taskOfCategory = tasksContext.tasks.filter(
+      (task) => task.category === categoryObj.name
+    );
+
+    const numTotalTasks = taskOfCategory.length;
+    const numCompletedTasks = taskOfCategory.filter(
+      (task) => task.completed
+    ).length;
+
+    return {
+      ...categoryObj,
+      numTotalTasks,
+      numCompletedTasks,
+    };
+  });
 
   return (
     <Row>

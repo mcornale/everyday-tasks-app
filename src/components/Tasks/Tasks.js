@@ -7,14 +7,16 @@ import TaskItem from './TaskItem';
 const Tasks = () => {
   const tasksContext = useContext(TasksContext);
 
-  const tasksItems = tasksContext.tasksInfo
-    .map((taskCat) => {
-      const color = taskCat.color;
-      taskCat.tasks.forEach((taskItem) => (taskItem.color = color));
+  const tasksItems = tasksContext.tasks.map((task) => {
+    const color = tasksContext.categories.find(
+      (categoryObj) => categoryObj.name === task.category
+    ).color;
 
-      return taskCat.tasks;
-    })
-    .flat();
+    return {
+      ...task,
+      color,
+    };
+  });
 
   return (
     <Row>
