@@ -1,0 +1,13 @@
+.bar {
+  background-color: var(--color-light-blue-2);
+  height: 0.8rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 1.8rem;
+}
+
+.bar__value {
+  background-color: var(--color-dark-blue);
+  height: 100%;
+  border-radius: 1rem;
+}

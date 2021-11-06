@@ -1,0 +1,11 @@
+.main {
+  flex-grow: 1;
+  min-width: 60rem;
+  padding: 6rem;
+}
+
+.sidebar {
+  flex: 0 0 38rem;
+  background-color: var(--color-white);
+  padding: 6rem;
+}

@@ -1,0 +1,6 @@
+.category {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 50%;
+}

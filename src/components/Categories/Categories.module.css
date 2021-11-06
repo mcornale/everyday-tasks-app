@@ -1,0 +1,8 @@
+.categories {
+  margin-top: 6rem;
+}
+
+.categories__loop {
+  display: flex;
+  gap: 2rem;
+}
