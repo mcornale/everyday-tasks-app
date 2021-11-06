@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
+  gap: 1.6rem;
 }
 
 .checkbox__label input {
@@ -16,11 +17,13 @@
 }
 
 .checkbox__checkmark {
+  position: relative;
+  flex-shrink: 0;
+  top: 0.2rem;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   background-color: var(--color-light-blue-2);
-  margin-right: 1.6rem;
   display: grid;
   place-items: center;
 }

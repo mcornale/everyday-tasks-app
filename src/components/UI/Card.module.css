@@ -3,4 +3,6 @@
   padding: 2rem;
   border-radius: 2rem;
   overflow: hidden;
+  flex: 1 0 46%;
+  min-width: 30rem;
 }

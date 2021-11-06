@@ -1,5 +1,5 @@
 .cards-container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
 }
