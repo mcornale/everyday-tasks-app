@@ -1,5 +1,5 @@
 import styles from './Calendar.module.css';
-import Card from './UI/Card';
+import Card from '../UI/Card';
 
 const MONTHS = [
   'January',
@@ -23,7 +23,7 @@ const Calendar = () => {
   const date = d.getDate();
 
   return (
-    <Card color='blue' padding='small'>
+    <Card width='full' color='blue' padding='small'>
       <p className={styles['date']}>{`${date} ${month} ${year}`}</p>
     </Card>
   );

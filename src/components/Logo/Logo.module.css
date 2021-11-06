@@ -3,11 +3,15 @@
   align-items: center;
 }
 
+.header img {
+  max-height: 5.8rem;
+}
+
 .header__title {
   margin-left: 2rem;
   font-size: 3.2rem;
 }
 
 .header__title span {
-  color: var(--color-dark-blue);
+  color: var(--color-main-blue);
 }

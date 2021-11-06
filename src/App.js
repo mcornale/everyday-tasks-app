@@ -3,7 +3,9 @@ import { TasksContextProvider } from './context/TasksContext';
 import Categories from './components/Categories/Categories';
 import Logo from './components/Logo/Logo';
 import Tasks from './components/Tasks/Tasks';
-import Calendar from './components/Calendar';
+import Calendar from './components/Calendar/Calendar';
+import AddCategory from './components/AddCategory';
+import AddTask from './components/AddTask';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       </main>
       <div className={styles['sidebar']}>
         <Calendar />
+        <AddCategory />
+        <AddTask />
       </div>
     </TasksContextProvider>
   );

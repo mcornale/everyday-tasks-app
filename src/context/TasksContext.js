@@ -1,20 +1,20 @@
 import { createContext, useState } from 'react';
 
-const colorsHex = ['#7a97ff', '#9bd4b9'];
+const COLORS_HEX = ['#7a97ff', '#9bd4b9', '#FF9A7A'];
 
 const DUMMY_CATEGORIES = [
   {
     id: 1,
     name: 'Routine',
     get color() {
-      return colorsHex[this.id - 1];
+      return COLORS_HEX[this.id - 1];
     },
   },
   {
     id: 2,
     name: 'Work',
     get color() {
-      return colorsHex[this.id - 1];
+      return COLORS_HEX[this.id - 1];
     },
   },
 ];
@@ -72,10 +72,23 @@ const TasksContextProvider = (props) => {
     setTasks(updatedTasks);
   };
 
+  const addNewCategory = (name) => {
+    const updatedCategories = [...categories];
+    const newCategoryId = updatedCategories.length + 1;
+    updatedCategories.push({
+      id: newCategoryId,
+      name,
+      color: COLORS_HEX[newCategoryId - 1],
+    });
+
+    console.log(updatedCategories);
+  };
+
   const context = {
     tasks,
     categories,
     updateTaskCompletion,
+    addNewCategory,
   };
 
   return (

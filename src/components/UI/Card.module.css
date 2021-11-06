@@ -8,10 +8,18 @@
   min-width: 30rem;
 }
 
+.card--full {
+  flex: 1 0 100%;
+}
+
 .card--blue {
   background-color: var(--color-main-blue);
   color: var(--color-white);
   text-align: center;
+}
+
+.card--light-blue {
+  background-color: var(--color-light-blue-2);
 }
 
 .card--white {
@@ -19,7 +27,7 @@
 }
 
 .card--padding-small {
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 .card--padding-medium {
