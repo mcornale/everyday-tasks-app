@@ -2,5 +2,5 @@
   background-color: var(--color-white);
   padding: 2rem;
   border-radius: 2rem;
-  flex: 1 0 20rem;
+  overflow: hidden;
 }

@@ -7,7 +7,6 @@
 }
 
 .bar__value {
-  background-color: var(--color-dark-blue);
   height: 100%;
   border-radius: 1rem;
 }

@@ -8,9 +8,14 @@ const CategoryItem = (props) => {
 
   return (
     <Card>
-      <h5>{`${props.completedTasks}/${props.totalTasks} tasks`}</h5>
+      <h5
+        style={{ color: props.color }}
+      >{`${props.completedTasks}/${props.totalTasks} tasks`}</h5>
       <h3>{props.name}</h3>
-      <CompletionPercentageBar completedPercentage={completedPercentage} />
+      <CompletionPercentageBar
+        color={props.color}
+        completedPercentage={completedPercentage}
+      />
     </Card>
   );
 };

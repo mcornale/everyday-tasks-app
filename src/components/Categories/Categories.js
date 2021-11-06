@@ -11,14 +11,15 @@ const Categories = () => {
     name: tasksItem.category,
     totalTasks: tasksItem.tasks.length,
     completedTasks: tasksItem.tasks.filter((task) => task.completed).length,
+    color: tasksItem.color,
   }));
 
   return (
     <Row>
       <h4>Categories</h4>
       <CardsContainer>
-        {categoryItems.map((catItem) => (
-          <CategoryItem {...catItem} />
+        {categoryItems.map((catItem, index) => (
+          <CategoryItem key={index} {...catItem} />
         ))}
       </CardsContainer>
     </Row>
