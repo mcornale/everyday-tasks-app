@@ -1,5 +1,5 @@
-import styles from './CategoryItem.module.css';
 import CompletionPercentageBar from './CompletionPercentageBar';
+import Card from '../UI/Card';
 
 const CategoryItem = (props) => {
   const completedPercentage = Math.round(
@@ -7,11 +7,11 @@ const CategoryItem = (props) => {
   );
 
   return (
-    <div className={styles['category']}>
+    <Card>
       <h5>{`${props.completedTasks}/${props.totalTasks} tasks`}</h5>
       <h3>{props.name}</h3>
       <CompletionPercentageBar completedPercentage={completedPercentage} />
-    </div>
+    </Card>
   );
 };
 

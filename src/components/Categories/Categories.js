@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import TasksContext from '../../context/TasksContext';
-import styles from './Categories.module.css';
+import CardsContainer from '../UI/CardsContainer';
+import Row from '../UI/Row';
 import CategoryItem from './CategoryItem';
 
 const Categories = () => {
@@ -13,14 +14,14 @@ const Categories = () => {
   }));
 
   return (
-    <div className={styles['categories']}>
+    <Row>
       <h4>Categories</h4>
-      <div className={styles['categories__loop']}>
+      <CardsContainer>
         {categoryItems.map((catItem) => (
           <CategoryItem {...catItem} />
         ))}
-      </div>
-    </div>
+      </CardsContainer>
+    </Row>
   );
 };
 
