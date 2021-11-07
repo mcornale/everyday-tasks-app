@@ -7,7 +7,7 @@ const CategoryItem = (props) => {
   );
 
   return (
-    <Card width='half' color='white' padding='medium'>
+    <Card width='half' color='white'>
       <h5
         style={{ color: props.color }}
       >{`${props.numCompletedTasks}/${props.numTotalTasks} tasks`}</h5>

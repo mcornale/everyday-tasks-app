@@ -23,7 +23,7 @@ const Calendar = () => {
   const date = d.getDate();
 
   return (
-    <Card width='full' color='blue' padding='small'>
+    <Card width='full' color='blue' padding='xs'>
       <p className={styles['date']}>{`${date} ${month} ${year}`}</p>
     </Card>
   );

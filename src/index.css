@@ -8,6 +8,10 @@
   --color-light-text-grey: #787878;
   --color-red-error: #ed6e6e;
   --color-white: #fff;
+  --padding-l: 6rem;
+  --padding-m: 4rem;
+  --padding-s: 2rem;
+  --padding-xs: 1.4rem;
 }
 
 *,
@@ -61,4 +65,23 @@ h4 {
 h5 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 44em) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  h5 {
+    font-size: 1.3rem;
+  }
 }

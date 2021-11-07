@@ -42,3 +42,10 @@
   .checkbox__checkmark-inner {
   transform: scale(0.7);
 }
+
+@media only screen and (max-width: 44em) {
+  .checkbox__checkmark {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

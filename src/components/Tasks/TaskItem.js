@@ -13,7 +13,7 @@ const TaskItem = (props) => {
   };
 
   return (
-    <Card width='half' color='white' padding='medium'>
+    <Card width='half' color='white'>
       <Checkbox
         color={props.color}
         checked={isChecked}

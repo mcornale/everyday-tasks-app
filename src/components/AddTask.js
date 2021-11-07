@@ -45,7 +45,7 @@ const AddTask = () => {
   return (
     <Row>
       <h4>Add task</h4>
-      <Card width='full' color='light-blue' padding='medium'>
+      <Card width='full' color='light-blue' padding='s'>
         <Form onSubmit={onSubmitHandler}>
           <Input
             label='Name'

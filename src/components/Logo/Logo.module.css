@@ -15,3 +15,14 @@
 .header__title span {
   color: var(--color-main-blue);
 }
+
+@media only screen and (max-width: 44em) {
+  .header__title {
+    margin-left: 2rem;
+    font-size: 2.6rem;
+  }
+
+  .header img {
+    max-height: 5rem;
+  }
+}
