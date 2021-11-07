@@ -1,6 +1,13 @@
 import { createContext, useState } from 'react';
 
-const COLORS_HEX = ['#7a97ff', '#9bd4b9', '#FF9A7A', '#CD7AFF'];
+const COLORS_HEX = [
+  '#7A97FF',
+  '#9BD4B9',
+  '#FF9A7A',
+  '#CD7AFF',
+  '#B2E362',
+  '#E80000',
+];
 
 const DUMMY_CATEGORIES = [
   {
